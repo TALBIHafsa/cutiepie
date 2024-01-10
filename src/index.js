@@ -46,42 +46,6 @@ app.get('/index', (req, res) => {
 
 
 
-///////////////////////////////////////////////////////////////////
-// Define a route to handle checkout data
-// Handle the checkout button click
-// app.post('/checkout', async (req, res) => {
-//     try {
-//         const orderData = {
-//             fullName: req.body.fullName,
-//             phoneNumber: req.body.phoneNumber,
-//             address: req.body.address
-//         };
-//         console.log('Received order data:', orderData)
-
-//         // Save the new order to the database using the 'orders' model
-//         const newOrder = await orders.create(orderData);
-
-// if (newOrder) {
-//     console.log('Order placed:', newOrder);
-//     res.status(200).send('Order placed successfully');
-// } else {
-//     console.error('Error creating order'); // Log error if order creation failed
-//     res.status(500).send('Error placing order');
-// }
-
-//     } catch (error) {
-//         console.error('Error placing order:', error);
-//         res.status(500).send('Error placing order');
-//     }
-// });
- 
-
-  //////////////////////////////////////////////////////////
-
-
-
-
-
 
 //register user
 app.post("/signup", async (req, res) => {
@@ -146,24 +110,6 @@ app.post("/login", async (req,res) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 app.post('/checkout', async (req, res) => {
     try {
         const orderData = {
@@ -196,8 +142,13 @@ app.post('/checkout', async (req, res) => {
 
 
 
-const port = 5000;
+const port = 5050;
 app.listen(port, () => {
     console.log(`Server running on Port : ${port}`);
 
 })
+
+
+
+//Set-ExecutionPolicy RemoteSigned -Scope Process
+//nodemon src/index.js
