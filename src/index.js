@@ -62,7 +62,7 @@ app.post("/signup", async (req, res) => {
     if(existingUser) {
         res.send("User already exists. Please choose a diffrent username.")
     }else if(existingEmail){
-        res.send("Email already exists. Please choose a diffrent username.")
+        res.send("Email already exists. Please choose a diffrent Email.")
 
     }else{
         //hash the password using bcrypt
@@ -87,24 +87,32 @@ app.post("/signup", async (req, res) => {
 
 
 //login user
-app.post("/login", async (req,res) => {
-    try{
-        const check = await users.findOne({name: req.body.username});
-        if(!check){
-            res.send("user name cannot be found");
+app.post("/login", async (req, res) => {
+    try {
+        const check = await users.findOne({ name: req.body.username });
+
+        if (!check) {
+            return res.send("User name cannot be found");
         }
-        //compare the hash password from the database with the plain text
-        const isPasswordMatch = await bcrypt.compare(req.body.password, check.password);
-        if(isPasswordMatch){
-            return res.redirect('/index');
-        }else{
-            return res.send("wrong password");
+
+        // Vérifier que check.password existe avant de comparer
+        if (check.password) {
+            const isPasswordMatch = await bcrypt.compare(req.body.password, check.password);
+
+            if (isPasswordMatch) {
+                return res.redirect('/index');
+            } else {
+                return res.send("Wrong password");
+            }
+        } else {
+            return res.send("User data is incomplete. Password not found.");
         }
-    }catch(error){
+    } catch (error) {
         console.error(error);
-        return res.status(500).send("wrong details");
+        return res.status(500).send("Wrong details");
     }
 });
+
 
 
 
