@@ -1,0 +1,80 @@
+[
+    {
+        "id":10,
+        "name":"Cream Blush",
+        "price": "40 DH",
+        "image": "images/cute/products/10.png"
+    },
+
+    {
+        "id":3,
+        "name":"8 Colors Blush Palette",
+        "price":"90 DH" ,
+        "image": "images/cute/products/3.png"
+    },
+    {
+        "id":5,
+        "name":"pink lip gloss",
+        "price":"40 DH" ,
+        "image": "images/cute/products/5.png"
+    },
+    {
+        "id":11,
+        "name":"Powder-Puff",
+        "price": "20 DH",
+        "image": "images/cute/products/11.png"
+    },
+ 
+    {
+        "id":2,
+        "name":"Soft Blush Brush",
+        "price":"25 DH" ,
+        "image": "images/cute/products/2.png"
+    },
+    {
+        "id":12,
+        "name":"Full coverage cushion",
+        "price": "75 DH",
+        "image": "images/cute/products/12.png"
+    },
+
+    
+    {
+        "id":7,
+        "name":"Peach-Colored Blush",
+        "price":"55 DH" ,
+        "image": "images/cute/products/7.png"
+    },
+    {
+        "id":8,
+        "name":"Eyelash Curler",
+        "price": "45 DH",
+        "image": "images/cute/products/8.png"
+    },
+    {
+        "id":9,
+        "name":"Maskara Extra Volume",
+        "price":"85 DH" ,
+        "image": "images/cute/products/9.png"
+    },
+
+    {
+        "id":4,
+        "name":"Fondation Full Coverage",
+        "price":"110 DH" ,
+        "image": "images/cute/products/4.png"
+    },
+    {
+        "id":6,
+        "name":"Beauty Blender",
+        "price": "15 DH",
+        "image": "images/cute/products/6.png"
+    },
+
+    {
+        "id":1,
+        "name":"Liquid Matte lipstick",
+        "price":"70 DH" ,
+        "image": "images/cute/products/1.png"
+    }
+]

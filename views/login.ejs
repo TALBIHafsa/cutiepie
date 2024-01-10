@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    />
+    <link rel="icon" href="images/cute/rosecolor.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="images/cute/rosecolor.png"
+      type="image/x-icon"
+    />
+    <title>CUTIEPIE</title>
+  </head>
+  <body>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+        <form action="/signup" method="post">
+          <h1 id="cutie">Sign Up</h1>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input
+              type="text"
+              id="name"
+              name="username"
+              placeholder="Username"
+              required
+              autocomplete="off"
+            />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+              autocomplete="off"
+            />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <button type="submit" class="button">Sign Up</button>
+        </form>
+      </div>
+      <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+      <div class="form-container sign-in-container">
+        <form id="loginForm" action="/login" method="post">
+          <h1>Sign In</h1>
+
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input
+              type="text"
+              id="name"
+              name="username"
+              placeholder="Username"
+              required
+              autocomplete="off"
+            />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <button type="submit" class="button">Login</button>
+        </form>
+      </div>
+      <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1 style="color: rgb(246, 213, 213)">welcome</h1>
+            <p class="slogan">
+              Experience a Radiant Glow through Our Opulent Selection of
+              Prestigious Makeup Essentials.
+            </p>
+            <p class="new">One of us?</p>
+            <button
+              class="press"
+              id="signIn"
+              style="color: #eb7979; border: 2px solid #eb7979"
+            >
+              Sign In
+            </button>
+          </div>
+          <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+          <div class="overlay-panel overlay-right">
+            <img src="images/cute/rosecolor.png" alt="" />
+            <h1>CUTIEPIE</h1>
+            <p class="slogan">
+              Enhance Your Beauty, <br />
+              Embrace The Glam.
+            </p>
+            <p class="new">New here?</p>
+
+            <button class="press" id="signUp">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Check if there's a success message and show it as an alert
+      const successMessage =
+        "<%= typeof successMessage !== 'undefined' ? successMessage : '' %>";
+      if (successMessage) {
+        alert(successMessage);
+      }
+    </script>
+
+    <!-- LINK TO JS -->
+    <script src="login.js"></script>
+  </body>
+</html>
